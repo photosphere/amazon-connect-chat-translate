@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Grid } from 'semantic-ui-react';
-import  { Amplify }  from 'aws-amplify';
-import awsconfig from '../aws-exports';
+// Amplify configuration disabled
+// import  { Amplify }  from 'aws-amplify';
+// import awsconfig from '../aws-exports';
 import Chatroom from './chatroom';
 import translateText from './translate'
 import detectText from './detectText'
 import { addChat, setLanguageTranslate, clearChat, useGlobalState, setCurrentContactId } from '../store/state';
 
-Amplify.configure(awsconfig);
+// Amplify.configure(awsconfig);
 
 const Ccp = () => {
     const [languageTranslate] = useGlobalState('languageTranslate');
